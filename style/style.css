@@ -1,0 +1,523 @@
+body{
+  background:white;
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  overflow-x:hidden;
+}
+
+html{
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh; /* Ajustez en fonction de vos besoins */
+  }
+  
+  .child {
+    flex: 1 1 200px; /* Ajustez la largeur de base, mais permet de s'étirer */
+    margin: 5px;
+    background: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+header{
+    padding-top: 5px;
+    padding-right: 10px;
+    display: flex;
+    overflow: visible;
+}
+
+
+header p{
+    border: 1px 1px 1px 1px solid black;
+}
+
+header div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#ez{
+    width: 50px;
+    flex-shrink: 0; /* Assure que cet élément ne rétrécit pas */
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto); /* 5 colonnes pour les 5 éléments */
+    column-gap: 10px; /* Espace entre chaque élément */
+    align-items: center; /* Aligner les éléments verticalement au centre */
+}
+
+.menu p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid black; /* Trait de séparation à droite */
+}
+
+.menu p:last-child {
+    border-right: none; /* Retirer le trait sur le dernier élément */
+}
+
+@media (max-width: 768px) {
+  .menu {
+      display: flex; /* On remplace grid par flex pour un meilleur contrôle */
+      justify-content: flex-end; /* Aligne tout à droite */
+      width: 100%;
+  }
+
+  .menu p {
+      display: none; /* Cache les éléments p */
+  }
+
+  .menu button {
+      margin-left: auto; /* Pousse le bouton vers la droite */
+  }
+}
+
+
+.clickable {
+    cursor: pointer; /* Change le curseur en main */
+    transition: color 0.3s ease; /* Transition pour l'effet de survol */
+  }
+
+.clickable:hover{
+    color: rgb(188, 188, 188);
+}
+
+h1{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center;
+}
+
+h2{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+h4{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+p{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+#logo-main{
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+    position: fixed; /* Rend l'élément sticky */
+    z-index: 4; /* Assure que l'élément reste au-dessus des autres contenus */
+}
+
+#logo-main:hover{
+    transform: scale(1.2);
+    z-index: 2;  
+}
+
+#logo-main img {
+    width: 50px; /* Largeur de l'image égale à la largeur de la div */
+    height: 50px; /* Hauteur de l'image égale à la hauteur de la div */
+}
+
+#dashboard{
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    gap: 40px; /* Espacement entre les éléments */
+    padding: 10px 10px 10px 10px;
+    margin: 20px 40px 20px 40px;
+
+}
+
+.dashbox {
+    flex: 1 1 calc(25% - 40px); /* Largeur des éléments, ajustée pour tenir compte du gap */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+    background-color: #ffffff; /* Couleur de fond pour la visibilité */
+    padding: 10px; /* Padding interne pour le contenu */
+    text-align: center; /* Centrer le texte à l'intérieur des boîtes */
+    border: 1px solid #ddd; /* Bordure pour mieux voir les boîtes */
+    height: auto;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    transition: 1s;
+    border-radius: 10%;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    position: relative;
+}
+.dashbox:hover{
+    transform: scale(1.5);
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-10px);
+    z-index: 2;    
+}
+.dashbox img {
+    width: 100%; /* Largeur de l'image égale à la largeur de la div */
+    height: 100%; /* Hauteur de l'image égale à la hauteur de la div */
+}
+
+.dashbox p{
+    font-size: large;
+    bottom: 10px;
+    position: absolute;
+    color: black;
+    font-weight: 1000;
+    font-size: 1vw;
+}
+
+#api {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Centre verticalement */
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box; /* Assurez-vous que le padding est inclus dans les dimensions */
+    overflow: hidden;
+}
+
+#api div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    flex: 1 1 300px; /* Permet de réduire la largeur des éléments enfants à 300px si nécessaire */
+    margin-left: 50px; /* Ajoutez de l'espace autour des éléments enfants */
+    margin-right: 50px; /* Ajoutez de l'espace autour des éléments enfants */
+    margin-bottom: 50px;
+    box-sizing: border-box; /* Assurez-vous que le padding est inclus dans les dimensions */
+    overflow: visible; /* Évite les débordements de texte */
+}
+
+#api img {
+    flex: 1 1 200px; /* Permet de réduire la largeur de l'image à 300px si nécessaire */
+    max-width: 300px;
+    height: auto; /* Conserve les proportions de l'image */
+}
+
+
+
+#what{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    flex-direction: column;
+    padding: 10px 50px 10px 50px;
+}
+
+#what div{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    flex-direction: column;
+    width: 100%;
+}
+
+#roadmap{
+  background:white;
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:500px;
+  overflow:hidden;
+}
+
+#team{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+#copyright{
+    font-size: xx-small;
+}
+
+#presentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
+    background-image: url('chart_2.svg');
+    background-size: cover;  /* Ajuste l'image à la taille de la div */
+    background-repeat: no-repeat;  /* Empêche la répétition de l'image */
+    background-position: center;  /* Centre l'image dans la div */
+}
+
+#presentation h1 {
+  margin-top: -100px; /* Réduit la marge supérieure pour déplacer l'élément vers le haut */
+}
+
+
+#community{
+    width: 50%;
+}
+
+#community div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+}
+
+.sociallogo {
+    width: 20px; /* Largeur de l'image égale à la largeur de la div */
+    height: 20px; 
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.sociallogo:hover{
+    transform: scale(1.2);
+    z-index: 2;    
+}
+
+.button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s ease,transform .15s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  .button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px) !important;
+  }
+  
+  .button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Ou la hauteur que tu souhaites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Style de l'image */
+.image-container img {
+    max-width: 20%; /* L'image occupe au maximum 100% de la largeur du conteneur */
+    height: auto; /* Maintient les proportions de l'image */
+    display: block; /* Retire l'espace blanc en dessous de l'image */
+    border-radius: 100%;
+    transition: 1s;
+}
+
+/* Afficher le texte au survol de la image */
+.image-container img:hover{
+    transform: scale(1.02);
+    z-index: 2; 
+}
+
+
+#ctn{
+  height: 400px;
+}
+
+@keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  #ez-2 {
+    width: 100%;
+    height: 1vh;
+  }
+  
+  .element {
+    opacity: 0; /* L'élément est invisible au début */
+    animation: slideUp 1s ease-out forwards; /* Durée et type d'animation */
+    animation-delay: 0.3s; /* Optionnel : délai avant le démarrage de l'animation */
+  }
+
+  .element2{
+    opacity: 0; /* L'élément est invisible au début */
+    animation: slideUp 1s ease-out forwards; /* Durée et type d'animation */
+    animation-delay: 1.1s; /* Optionnel : délai avant le démarrage de l'animation */
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .add{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider {
+    margin: 80px 0;
+    height: 200px;
+    display: block;
+    perspective: 1000px;
+    position: relative;
+    width: 100%;
+  }
+  
+   .slide{
+     margin-left:-50px;
+      display: inline-block;
+      width: 200px;
+      position: absolute;
+      backface-visibility: hidden;
+      transition: .4s all;
+      border-radius:20px;
+      color:black;
+      background-color: rgba(255, 255, 255, 0.5); /* Fallback */
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: double 1px transparent;
+      border-radius: 20px;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border-color: black;
+      box-shadow: rgba(0, 0, 0, 0.902) 0px 5px 15px;  
+    }
+  
+  .slide-container{
+    padding:20px 30px;
+  }
+  
+  .slide-container ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .slide-container ul li{
+    text-align: center; /* Centre le texte horizontalement */
+    padding:0;
+  }
+  
+  .slide.active {
+      z-index: 4; 
+    }
+
+    #space{
+      width: 100%;
+      height: 0px;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    table-layout: fixed;
+  }
+  
+  th, td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid black; /* Bordure noire pour les cellules */
+      font-size: 0.6vw;
+  }
+  
+  th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      text-align: center;
+  }
+  
+  tr:hover {
+      background-color: #f1f1f1;
+  }
+
+#test24 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 45%;
+}
+
+.right {
+    width: 45%;
+}
+
+.test{
+  text-align: center;
+}
+
+.description{
+  text-align: center;
+}
+
+
+
+
+

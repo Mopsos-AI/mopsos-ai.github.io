@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mopsos AI</title>
+
+        <link rel="icon" type="image/svg+xml" href="logo.svg">
+
+        <!-- Inclusion du fichier css pour le style du jeu -->
+        <link rel="stylesheet" href="style/style.css">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css">
+        <style>
+        body{
+            font-family: "Computer Modern Serif", serif;
+            }
+        </style>
+
+        <!-- Inclusion des 3 scripts nécessaires pour faire fonctionner le jeu -->
+        <!-- Attention, l'ordre des fichiers js est important.  -->
+        <script src="script.js" defer></script>
+        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+    </head>
+
+    <body>
+
+        <div id="logo-main" class="clickable" onclick="scrollToSection('header')">
+            <img src="logo.svg" alt="logo">
+        </div>
+        <!-- HEADER -->
+        <header id="header">
+
+          <div id="ez">
+                
+          </div>
+
+
+              <div>
+                  <div class="menu">
+                      <p  class="clickable" onclick="scrollToSection('dashboard-scroll')">Dashboard</p>
+                      <p  class="clickable" onclick="scrollToSection('api-scroll')">API</p>
+                      <p  class="clickable" onclick="scrollToSection('project-scroll')">Project</p>
+                      <p  class="clickable" onclick="scrollToSection('roadmap-scroll')">Roadmap</p>
+                      <p  class="clickable" onclick="scrollToSection('team-scroll')">Team</p>
+
+                      <button onclick="redirectToForm()" class="button-30" role="button">Contact us</button>
+                      
+                    </div>
+  
+                      
+              </div>
+           
+        </header>
+
+        <!-- MAIN -->
+        <main>
+
+            <div id="ez-2"></div>
+
+            <div id="presentation">
+
+                <h1 class="element">Mopsos AI: Most advanced data for crypto market prediction.</h1>
+
+                <button class="element2 button-30" role="button" onclick="scrollToSection('dashboard-scroll')">Explore Data!</button>
+
+            </div>
+
+            <div id="presentation-2">
+
+            </div>
+
+            <div id="discover">
+            </div>
+
+            <div id="dashboard-scroll"></div>
+
+            <h1 class="element3 hidden">Dashboard</h1>
+            <div id="dashboard">
+
+                <a href="ocean.html" class="dashbox" target="_blank">
+                    <img src="oceanlogo.svg" alt="oceanlogo">
+                </a>
+        
+                <a href="dimitra.html" class="dashbox" target="_blank">
+                  <div id="container-img">
+                    <img src="dimitralogo.svg" alt="dimitralogo">
+                  </div>
+                </a>
+        
+                <a href="numerai.html" class="dashbox" target="_blank">
+                    <img src="numerailogo.svg" alt="numerailogo">
+                </a>
+        
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSePW42Lgsj0q2cHbGDUzY5p-EjD8frRu-i2zRsw9hVWOlpwZg/viewform" class="dashbox" target="_blank">
+                    <img src="addcross.svg" alt="addcross">
+                    <p>ADD YOURS</p>
+                </a>
+
+            </div>
+
+            <div id="api-scroll"></div>
+            <h1 class="hidden element3">API</h1>
+            <div id="api">
+                
+                <div>
+                    <p class="description">
+                      Unlock valuable insights from the crypto market with our advanced crypto data API. By aggregating real-time metrics across numerous crypto projects, Mopsos API offers a comprehensive and predictive view of market movements. Whether you're an individual investor or a hedge fund seeking to enhance your decision-making, our API provides reliable, structured data in JSON format, ready to be integrated into your workflows.
+                    </p>
+
+                        <a href="https://mopsos-ai-api-jnoh.onrender.com" target="_blank">
+                            <button class="button-30" role="button">API</button>
+                        </a>
+                      
+                </div>
+
+
+                <!-- <img src="api.svg" alt="api-logo"> -->
+
+
+
+            </div>
+
+            <div id="project-scroll"></div>
+            <h1 class="element3 hidden">What is Mopsos AI?</h1>
+            <div id="what">
+
+            <div class="description">   
+              <p>Mopsos AI revolutionizes the landscape of crypto investments by providing the most advanced historical and real-time data related to small and mid-cap crypto projects.</p>      
+              <p>Our data is exclusively sourced by our team, making it inaccessible through other providers and empowering our clients to consistently outperform the market. To safeguard this edge, our data undergoes meticulous obfuscation, preventing third parties from replicating our unique data pipeline. This ensures that our insights remain exclusive to our clients, preserving their intrinsic value by keeping them confidential and unpriced by the market.</p>
+              </br>
+              <p>The dataset for each crypto token is structured as follows:</p>                         
+            </div>
+
+            <div class="table-container">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>date</th>
+                          <th>feature_1</th>
+                          <th>feature_2</th>
+                          <th>...</th>
+                          <th>feature_n</th>
+                          <th>trading_volume</th>
+                          <th>return</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>2020-01-01</td>
+                          <td>0.014918414918414918</td>
+                          <td>0.014295439074200136</td>
+                          <td>...</td>
+                          <td>0.021581348400701958</td>
+                          <td>12577450</td>
+                          <td>5.454735375905084</td>
+                      </tr>
+                      <tr>
+                          <td>2020-01-02</td>
+                          <td>0.02564102564102564</td>
+                          <td>0.02314499659632403</td>
+                          <td>...</td>
+                          <td>0.019137450791245746</td>
+                          <td>10414026</td>
+                          <td>-11.324119161047063</td>
+                      </tr>
+                      <tr>
+                          <td>...</td>
+                          <td>...</td>
+                          <td>...</td>
+                          <td>...</td>
+                          <td>...</td>
+                          <td>...</td>
+                          <td>...</td>
+                      </tr>
+                      <tr>
+                        <td>2024-10-27</td>
+                        <td>0.018648018648018648</td>
+                        <td>0.02450646698434309</td>
+                        <td>...</td>
+                        <td>0.30248055474137164</td>
+                        <td>281703</td>
+                        <td>3.253577408262842</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-28</td>
+                        <td>0.05827505827505827</td>
+                        <td>0.06807351940095303</td>
+                        <td>...</td>
+                        <td>0.301451174139913</td>
+                        <td>381899</td>
+                        <td>-0.3403129838672747</td>
+                    </tr>
+                  </tbody>
+              </table>
+          </div>
+
+            </div>
+
+            <div id="roadmap-scroll"></div>
+            <h1 class="element3 hidden">Roadmap</h1>
+            <div id="roadmap">
+                <div class="slider">
+                    <div class="slide">
+                      <div class="slide-container">
+                        <h2 class="slide-Title">Q2 - 2024</h2>
+                        <div class="slide-description">
+                          <ul>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li>Birth & POC</li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="slide-container">
+                        <h2 class="slide-Title">Q3 - 2024</h2>
+                        <div class="slide-description">
+                          <ul>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li>Dashboard Prototype</li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="slide-container">
+                        <h2 class="slide-Title">Q3 - 2024</h2>
+                        <div class="slide-description">
+                          <ul>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li>API Prototype</li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide active">
+                      <div class="slide-container">
+                        <h2 class="slide-Title">Q1 - 2025</h2>
+                        <div class="slide-description">
+                          <ul>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li>MVP</li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="slide-container">
+                        <h2 class="slide-Title">Q3 - 2025</h2>
+                        <div class="slide-description">
+                          <ul>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li>Product V1</li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="slide-container">
+                        <h2 class="slide-Title">Q1 - 2026</h2>
+                        <div class="slide-description">
+                          <ul>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li>Mopsos Research</li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="slide-container">
+                        <h2 class="slide-Title">Q1 - 2027</h2>
+                        <div class="slide-description">
+                          <ul>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li>Mopsos Crypto Hedge Fund</li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                            <li><br></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div id="space">
+
+            </div>
+
+
+
+            <h1 id="team-scroll" class="element3 hidden">Our Team</h1>
+            <div id="team">
+                <div class="image-container">
+                    <img src="pp.jpg" alt="Image de fond">
+                    <div>
+                        Tom Pollet <br>
+                        Founder
+                    </div>
+                </div>
+
+
+
+            </div>
+   
+
+ 
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div id="community">
+                <div>
+                    <h5>Community</h5>
+                </div>
+                <div>
+                    <a href="https://x.com/mopsos_ai" target="_blank"><img class="sociallogo" src="twitterlogo.svg" alt="twitterlogo"></a>
+                    <a href="https://discord.gg/wVQTxYGZfx" target="_blank"><img class="sociallogo" src="discordlogo.svg" alt="discordlogo"></a>
+                    <a href="https://github.com/Mopsos-AI" target="_blank"><img class="sociallogo" src="githublogo.svg" alt="githublogo"></a>
+                </div>
+            </div>
+
+            <p id="copyright">© 2024 Mopsos AI — All Rights Reserved</p>
+        </footer>
+    </body>
+</html>
