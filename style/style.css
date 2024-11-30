@@ -1,5 +1,5 @@
 body{
-  background:white;
+  background: white;
   margin:0;
   padding:0;
   width:100vw;
@@ -141,7 +141,7 @@ p{
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
     gap: 40px; /* Espacement entre les éléments */
     padding: 10px 10px 10px 10px;
-    margin: 20px 40px 20px 40px;
+    margin: 20px 40px 40px 40px;
     justify-content: center;
 
 }
@@ -185,52 +185,16 @@ p{
 }
 
 #api {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; /* Centre verticalement */
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-sizing: border-box; /* Assurez-vous que le padding est inclus dans les dimensions */
-    overflow: hidden;
+  margin: 0;
+  display: flex;           /* Utilise un modèle de flexbox */
+  flex-direction: column;  /* Organise les éléments dans une colonne */
+  align-items: center;     /* Centre les éléments horizontalement */
+  justify-content: center; /* Centre les éléments verticalement si nécessaire */
+  text-align: center;      /* Assure que le texte dans les paragraphes est centré */
 }
 
-#api div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: auto;
-    flex: 1 1 300px; /* Permet de réduire la largeur des éléments enfants à 300px si nécessaire */
-    margin-left: 50px; /* Ajoutez de l'espace autour des éléments enfants */
-    margin-right: 50px; /* Ajoutez de l'espace autour des éléments enfants */
-    margin-bottom: 50px;
-    box-sizing: border-box; /* Assurez-vous que le padding est inclus dans les dimensions */
-    overflow: visible; /* Évite les débordements de texte */
-}
-
-#api img {
-    flex: 1 1 200px; /* Permet de réduire la largeur de l'image à 300px si nécessaire */
-    max-width: 300px;
-    height: auto; /* Conserve les proportions de l'image */
-}
-
-
-
-#what{
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    flex-direction: column;
-    padding: 10px 50px 10px 50px;
-}
-
-#what div{
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    align-items: center; /* Centre verticalement */
-    flex-direction: column;
-    width: 100%;
+#api p:first-of-type {
+  margin-top: 0;
 }
 
 #roadmap{
@@ -471,6 +435,7 @@ p{
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 40px;
   }
   
   table {
@@ -499,26 +464,94 @@ p{
       background-color: #f1f1f1;
   }
 
-#test24 {
+  .text{
+    text-align: justify;
+    padding: 0px 50px 0px 50px;
+    text-align-last: center;
+  }
+
+  .test24 {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Place les colonnes à chaque moitié de l'écran */
+    align-items: flex-start; /* Aligne les colonnes par le haut */
+    width: 100%; /* Prend toute la largeur de l'écran */
+    padding: 0 20px; /* Ajoute un padding pour respirer */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+  }
+  
+  .column {
+    width: 45%; /* Chaque colonne occupe 45% de la largeur */
     display: flex;
-    justify-content: space-between;
-}
-
-.left {
-    width: 45%;
-}
-
-.right {
-    width: 45%;
-}
-
+    justify-content: center; /* Centre le contenu horizontalement dans la colonne */
+    text-align: justify; /* Centre le texte à l'intérieur */
+    padding: 10px 50px 10px 50px;
+  }
+  
+  
 .test{
   text-align: center;
 }
 
-.description{
-  text-align: center;
+
+.white-gradient {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+/* Styling */
+.slider_2 {
+  background: white;
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+
+.slider_2::before,
+.slider_2::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider_2::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider_2::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track_2 {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slide_2 {
+  height: 100px;
+  width: 250px;
+}
+
+
+
 
 
 
